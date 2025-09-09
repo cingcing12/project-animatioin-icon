@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>មេគុណ - ទំព័រដើម</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body data-bs-theme="dark">
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- nav brand start -->
+        <a href="index.html" class="nav-brand"
+          ><dotlottie-wc
+            src="https://lottie.host/b94a72f0-6aef-4851-b410-f935e53ea4f5/RQnQZQZgck.lottie"
+            speed="1"
+            autoplay
+            loop
+          ></dotlottie-wc
+        ></a>
+        <!-- nav brand end -->
+
+        <!-- container darkmode start -->
+        <div class="containerDarkMode justify-content-end">
+          <button class="btnDataMode active" data-darkmode="light">
+            <dotlottie-wc
+              src="https://lottie.host/4c86995e-a65f-4bac-ac79-d610b4889a4e/EbhRT6rpfM.lottie"
+              style="width: 100px"
+              speed="1"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </button>
+
+          <button class="btnDataMode" data-darkmode="dark">
+            <dotlottie-wc
+              src="https://lottie.host/204b8ebb-66ba-4987-9dc2-c231794c3371/WpZobMLBTE.lottie"
+              style="width: 100px"
+              speed="1"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </button>
+        </div>
+        <!-- container darkmode end -->
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- main start  -->
+    <main class="main">
+      <section class="section-container">
+        <div class="container">
+          <h1
+            class="d-flex align-items-center justify-content-center my-lg-5 my-4 title"
+          >
+            <dotlottie-wc
+              src="https://lottie.host/a361dc15-cdb2-44d7-abb9-29699489d3a4/A4d9kFkEUB.lottie"
+              style="width: 100px"
+              speed="1"
+              autoplay
+              loop
+            ></dotlottie-wc>
+            មេគុណ
+          </h1>
+          <div
+            class="row flex-lg-row flex-column flex-column-reverse align-items-lg-start align-items-center"
+          >
+            <div class="containerLeft col-lg-6 col-12">
+              <dotlottie-wc
+                src="https://lottie.host/da3bcf76-659b-4565-954c-03de40fa237d/qMfak7taCg.lottie"
+                style="width: 100%"
+                speed="1"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="containerRight col-lg-6 col-12">
+              <div class="row justify-content-center">
+                <div class="col-lg-10 col-12">
+                  <form>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      placeholder="សូមបញ្ចូលលេខមេគុណដែលអ្នកចង់បាន"
+                      required
+                    />
+                    <div class="d-flex justify-content-end my-4">
+                      <button type="submit">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- main end  -->
+
+    <div class="container-save">
+      <div class="container">
+        <h4 class="text-success fw-bold mb-3 text-center">Save</h4>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="radioDefault"
+            id="jpg"
+          />
+          <label class="form-check-label text-success fw-bold" for="jpg">
+            JPG
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="radioDefault"
+            id="pdf"
+          />
+          <label class="form-check-label text-success fw-bold" for="pdf">
+            PDF
+          </label>
+        </div>
+
+        <div class="mt-2 justify-content-end d-flex">
+          <button class="btn btn-primary saveBtn">
+            Save <i class="bi bi-download"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- overlay start  -->
+    <div class="overlay hidden">
+      <dotlottie-wc
+        src="https://lottie.host/4bc2bba5-9e01-467e-8bf4-91e0099ad957/5gXFEbGNFG.lottie"
+        style="width: 300px; height: 300px"
+        speed="2"
+        autoplay
+        loop
+      ></dotlottie-wc>
+    </div>
+    <!-- overlay end  -->
+
+    <!-- darkmode js  -->
+    <script src="darkmode.js"></script>
+
+    <script>
+      const overlay = document.querySelector(".overlay");
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const input = parseInt(e.target.querySelector("input").value);
+
+        if (input <= 0) {
+          updateLoading().then(() => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "The number is nagative or equal zero! Please enter the positive number or bigger than zero!",
+              showConfirmButton: false,
+              timer: 2500,
+            }).then(() => {
+              e.target.querySelector("input").value = "";
+            });
+          });
+        } else {
+          updateLoading()
+            .then(() => {
+              const overlayCreate = document.createElement("div");
+              overlayCreate.classList.add("overlayCreate");
+              const containerNumber = document.createElement("div");
+              const containerInner = document.createElement("p");
+              const concel = document.createElement("button");
+              const save = document.createElement("button");
+              save.classList.add("save");
+              save.innerHTML = `Save <i class="bi bi-download"></i>`;
+
+              concel.className = "btn btn-danger";
+              containerNumber.className = "containerNumber";
+              containerNumber.innerHTML = `<h5 class="mb-3 text-success fw-bold">មេគុណ​​ ${input}:</h5>`;
+              containerInner.className = "p-content";
+              for (let i = 1; i <= 10; i++) {
+                containerInner.innerHTML += `
+                    <span class="text-danger">${input}</span> * <span class="text-danger">${i}</span> = <span class="text-success">${
+                  input * i
+                }</span><br>
+                `;
+              }
+
+              concel.innerHTML = `<i class="bi bi-x-lg"></i>`;
+
+              containerNumber.appendChild(containerInner);
+              containerNumber.appendChild(concel);
+              containerNumber.appendChild(save);
+              document.querySelector("body").appendChild(containerNumber);
+              document.querySelector("body").appendChild(overlayCreate);
+
+              overlayCreate.addEventListener("click", () => {
+                updateRemove(overlayCreate, containerNumber);
+              });
+              concel.addEventListener("click", () => {
+                updateRemove(overlayCreate, containerNumber);
+              });
+
+              const container_save = document.querySelector(".container-save");
+              save.addEventListener("click", () => {
+                updateLoading().then(() => {
+                  const overlaySave = document.createElement("div");
+                  overlaySave.classList.add("overlaySave");
+                  document.querySelector("body").appendChild(overlaySave);
+                  container_save.classList.add("active");
+
+                  overlaySave.addEventListener("click", () => {
+                    overlaySave.remove();
+                    container_save.classList.remove("active");
+                    updateCheckInput();
+                  });
+
+                  document
+                    .querySelector(".saveBtn")
+                    .addEventListener("click", (e) => {
+                      const containerSave = e.target.closest(".container-save");
+                      const inputChecked =
+                        containerSave.querySelector("input:checked");
+
+                      if (!inputChecked) {
+                        updateLoading().then(() => {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please select the option!",
+                            showConfirmButton: false,
+                            timer: 2500,
+                          });
+                        });
+                      } else {
+                        if (inputChecked.id == "pdf") {
+                          updateLoading()
+                            .then(() => {
+                              html2canvas(containerNumber, {
+                                scale: 3, // render at 3x resolution for sharpness
+                                useCORS: true,
+                              }).then((canvas) => {
+                                const imgData = canvas.toDataURL(
+                                  "image/jpeg",
+                                  1.0
+                                );
+                                const { jsPDF } = window.jspdf;
+                                const pdf = new jsPDF("p", "mm", "a4"); // portrait, mm units, A4 page
+                                // Calculate dimensions so it fits nicely on A4
+                                const pdfWidth =
+                                  pdf.internal.pageSize.getWidth();
+                                const pdfHeight =
+                                  (canvas.height * pdfWidth) / canvas.width;
+                                pdf.addImage(
+                                  imgData,
+                                  "JPEG",
+                                  0,
+                                  0,
+                                  pdfWidth,
+                                  pdfHeight
+                                );
+                                pdf.save(`mekoun-${input}.pdf`);
+                              });
+                            })
+                            .then(() => {
+                              Swal.fire({
+                                icon: "success",
+                                title: `Save ${inputChecked.id} successfully!`,
+                                showConfirmButton: false,
+                                timer: 2500,
+                                position: "top-end",
+                              }).then(() => {
+                                container_save.classList.remove("active");
+                                overlaySave.remove();
+                                updateRemove(overlayCreate, containerNumber);
+                                updateCheckInput();
+                              });
+                            })
+                            .catch((err) => {
+                              Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: err.message,
+                              });
+                            });
+                        } else {
+                          updateLoading()
+                            .then(() => {
+                              html2canvas(containerNumber).then((canvas) => {
+                                const link = document.createElement("a");
+                                link.href = canvas.toDataURL("image/jpeg", 1.0); // JPG format
+                                link.download = `mekoun-${input}.jpg`;
+                                link.click();
+                              });
+                            })
+                            .then(() => {
+                              Swal.fire({
+                                icon: "success",
+                                title: `Save ${inputChecked.id} successfully!`,
+                                showConfirmButton: false,
+                                timer: 2500,
+                                position: "top-end",
+                              }).then(() => {
+                                container_save.classList.remove("active");
+                                overlaySave.remove();
+                                updateRemove(overlayCreate, containerNumber);
+                                updateCheckInput();
+                              });
+                            })
+                            .catch((err) => {
+                              Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: err.message,
+                              });
+                            });
+                        }
+                      }
+                    });
+                });
+              });
+
+            })
+            .then(() => {
+              e.target.querySelector("input").value = "";
+              e.target.querySelector("input").blur();
+            });
+        }
+      });
+
+      window.addEventListener("load", () => {
+        updateLoading();
+      });
+
+      const updateLoading = async () => {
+        overlay.classList.remove("hidden");
+        window.addEventListener("transitionend", () => {
+          overlay.classList.add("hidden");
+        });
+
+        const pro = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(true);
+          }, 1500);
+        });
+        return pro;
+      };
+
+      const updateRemove = (overlayCreate, containerNumber) => {
+        overlayCreate.remove();
+        containerNumber.remove();
+      };
+
+      let updateCheckInput = () => {
+        document.querySelector('input:checked').checked = false;
+      }
+    </script>
+  </body>
+</html>

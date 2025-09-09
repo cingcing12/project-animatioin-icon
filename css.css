@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+.containerDarkMode{
+    display: flex;
+}
+
+.btnDataMode{
+    background: transparent;
+    border: none;
+    display: none;
+}
+.btnDataMode.active{
+    display: block;
+}
+
+.nav-brand dotlottie-wc{
+    width: 200px;
+}
+
+
+.section-container .container{
+    max-width: 1000px;
+    width: 100%;
+    border: 1px solid white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 300px white;
+}
+
+.section-container{
+    margin-block: 150px;
+    margin-inline: 20px;
+}
+
+.title{
+    color: aqua;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 30px aqua);
+}
+
+body[data-bs-theme="light"] .section-container .container{
+    border-color: rgb(148, 21, 91);
+    box-shadow: 0 0 300px rgb(156, 57, 95);
+}
+
+body[data-bs-theme="light"] .title{
+    filter: drop-shadow(0px 0px 30px rgb(226, 64, 140));
+    color: rgb(199, 80, 179);
+}
+
+button[type="submit"]{
+    background-color: rgb(86, 185, 185);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
+}
+
+body[data-bs-theme="light"] button[type="submit"]{
+    color: white;
+    background-color: rgb(201, 63, 189);
+    box-shadow: 0 0 10px rgb(187, 76, 122);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.containerLeft{
+    border-right: 1px solid aqua;
+    filter: drop-shadow(0px 0px 30px white);
+}
+body[data-bs-theme="light"] .containerLeft{
+    filter: drop-shadow(0px 0px 30px rgb(209, 50, 130));
+}
+
+body[data-bs-theme="light"] .containerLeft{
+    border-color: rgb(196, 49, 130);
+}
+
+.overlay{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: black;
+    opacity: 0.95;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.overlay.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.containerNumber{
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    /* Fix here */
+    min-width: 300px;      /* allow more space */
+    max-width: 90%;        /* responsive */
+    width: auto;           /* let it grow naturally */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    & button{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+}
+
+.overlayCreate{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 99;
+    inset: 0;
+    animation: overl 0.75s linear forwards;
+}
+
+.containerNumber .save{
+    position: absolute;
+    border: none;
+    top: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: greenyellow;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.container-save{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    z-index: 111;
+}
+
+.overlaySave{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 110;
+    inset: 0;
+    animation: overl 0.75s linear forwards;
+}
+
+
+.container-save.active{
+    display: inline-flex;
+}
+
+@keyframes overl{
+    to{
+        opacity: 0.75;
+    }
+}
+
+@media(max-width:991px){
+    .containerLeft{
+        border-right: none;
+        border-top: 1px solid aqua;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 768px){
+    .nav-brand dotlottie-wc{
+        width: 150px;
+    }
+
+    .section-container{
+        margin-block: 100px;
+    }
+
+    .section-container .container{
+        padding: 20px 30px;
+    }
+}
